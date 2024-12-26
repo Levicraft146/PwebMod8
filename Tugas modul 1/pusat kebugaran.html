@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pusat Kebugaran</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        .submenu {
+            display: none;
+            background-color: blue;
+            color: white;
+        }
+        .active {
+            display: block !important;
+        }
+    </style>
+    <script>
+        function toggleSubmenu(id) {
+            const submenu = document.getElementById(id);
+            submenu.classList.toggle('active');
+        }
+
+        function toggleFasilitas() {
+            const menu = document.getElementById('fasilitas-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body class="bg-gray-200">
+  <header class="bg-black text-white">
+      <div class="container mx-auto flex justify-between items-center py-4">
+          <div class="flex items-center">
+              <img alt="Hotel Logo" class="mr-4" height="200" src="LCD.jpg" width="200"/>
+              <h1 class="text-2xl font-bold">
+                  BEST HOTEL<br>
+                  (Levi craft Diamond)
+              </h1>
+          </div>
+          <img alt="Hotel Image" class="ml-4" height="100" src="Pantai.jpg" width="700"/>
+      </div>
+  </header>
+  <nav class="bg-blue-800 text-white">
+      <div class="container mx-auto flex justify-start space-x-4 py-2">
+          <a class="hover:underline" href="index.html">Home</a>
+          <a class="hover:underline" href="kamar.html">Kamar</a>
+          <div class="relative group">
+              <a class="hover:underline cursor-pointer" onclick="toggleFasilitas()">Fasilitas</a>
+              <div id="fasilitas-menu" class="absolute hidden bg-blue-700 text-white mt-2 rounded-lg shadow-lg w-40">
+                  <ul>
+                      <li class="hover:bg-blue-600 px-4 py-2"><a href="petualangan alam.html">Petualangan Alam</a></li>
+                      <li class="relative hover:bg-blue-600 px-4 py-2 cursor-pointer">
+                          <a class="block" onclick="toggleSubmenu('kolam-renang')">Kolam Renang</a>
+                          <div id="kolam-renang" class="absolute hidden submenu text-white mt-0 ml-40 rounded-lg shadow-lg w-40">
+                              <ul>
+                                  <li class="hover:bg-blue-500 px-4 py-2"><a href="sumber air panas.html">Sumber Air Panas</a></li>
+                                  <li class="relative hover:bg-blue-500 px-4 py-2 cursor-pointer">
+                                      <a class="block" onclick="toggleSubmenu('kolam-anak-dewasa')">Kolam Anak dan Dewasa</a>
+                                      <div id="kolam-anak-dewasa" class="absolute hidden submenu text-white mt-0 ml-40 rounded-lg shadow-lg w-40">
+                                          <ul>
+                                              <li class="hover:bg-blue-400 px-4 py-2"><a href="kolam reguler.html">Reguler</a></li>
+                                              <li class="hover:bg-blue-400 px-4 py-2"><a href="kolam premium.html">Premium</a></li>
+                                          </ul>
+                                      </div>
+                                  </li>
+                              </ul>
+                          </div>
+                      </li>
+                      <li class="hover:bg-blue-600 px-4 py-2"><a href="pusat kebugaran.html">Pusat Kebugaran</a></li>
+                      <li class="hover:bg-blue-600 px-4 py-2"><a href="ruang rapat.html">Ruang Rapat</a></li>
+                  </ul>
+              </div>
+          </div>
+          <a class="hover:underline" href="pesan sekarang.html">Pesan Sekarang</a>
+      </div>
+  </nav>
+  
+  <main class="container mx-auto p-4">
+    <!-- Image Section -->
+    <img src="OR.jpg" alt="Petualangan Alam" class="w-full h-64 object-cover rounded-lg shadow-lg mb-4">
+
+    <!-- Fasilitas Table -->
+    <section class="bg-white rounded-lg shadow-lg p-4">
+        <h2 class="text-2xl font-bold mb-4 text-blue-700">Fasilitas Pusat Kebugaran</h2>
+        <table class="min-w-full bg-white border">
+            <thead class="bg-blue-800 text-white">
+                  <tr>
+                      <th class="py-3 px-6 border-b">ID</th>
+                      <th class="py-3 px-6 border-b">Nama</th>
+                      <th class="py-3 px-6 border-b">Fasilitas</th>
+                      <th class="py-3 px-6 border-b">Harga (Weekend)</th>
+                      <th class="py-3 px-6 border-b">Harga (Weekday)</th>
+                      <th class="py-3 px-6 border-b">Kuota</th>
+                      <th class="py-3 px-6 border-b">Jam Buka</th>
+                      <th class="py-3 px-6 border-b">Jam Tutup</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr class="text-gray-700">
+                      <td class="py-3 px-6 border-b text-center">1</td>
+                      <td class="py-3 px-6 border-b">Gym Premium</td>
+                      <td class="py-3 px-6 border-b">Alat fitness modern, pelatih pribadi</td>
+                      <td class="py-3 px-6 border-b">Rp 100,000</td>
+                      <td class="py-3 px-6 border-b">Rp 80,000</td>
+                      <td class="py-3 px-6 border-b">50 orang</td>
+                      <td class="py-3 px-6 border-b">06:00</td>
+                      <td class="py-3 px-6 border-b">22:00</td>
+                  </tr>
+                  <tr class="text-gray-700 bg-gray-100">
+                      <td class="py-3 px-6 border-b text-center">2</td>
+                      <td class="py-3 px-6 border-b">Yoga Room</td>
+                      <td class="py-3 px-6 border-b">Ruangan yoga, kelas yoga harian</td>
+                      <td class="py-3 px-6 border-b">Rp 50,000</td>
+                      <td class="py-3 px-6 border-b">Rp 40,000</td>
+                      <td class="py-3 px-6 border-b">20 orang</td>
+                      <td class="py-3 px-6 border-b">08:00</td>
+                      <td class="py-3 px-6 border-b">20:00</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </main>
+  
+  <footer class="bg-blue-800 text-white text-center py-4">
+      <p>© 2024 Queen Best Hotel!</p>
+  </footer>
+</body>
+</html>
