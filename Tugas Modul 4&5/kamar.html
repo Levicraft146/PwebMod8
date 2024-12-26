@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data Kamar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Data harga dan fasilitas per jenis kamar
+        const kamarData = {
+            "STANDAR": {
+                "harga": 500000,
+                "fasilitas": "AC, TV, Kamar Mandi Pribadi"
+            },
+            "DELUXE": {
+                "harga": 750000,
+                "fasilitas": "AC, TV, Kamar Mandi Pribadi, Balkon"
+            },
+            "FAMILY": {
+                "harga": 1000000,
+                "fasilitas": "AC, TV, Kamar Mandi Pribadi, Balkon, Kasur Tambahan"
+            }
+        };
+
+        function validasiKamar() {
+            var idKamar = document.getElementById("id_kamar").value;
+            var jenisKamar = document.getElementById("jenis_kamar").value;
+            var gambarKamar = document.getElementById("gambar_kamar");
+            var fasilitas = document.getElementById("fasilitas").value;
+
+            if (idKamar === "") {
+                alert("ID Kamar tidak boleh kosong!");
+                return false;
+            }
+            if (jenisKamar === "") {
+                alert("Jenis Kamar harus dipilih!");
+                return false;
+            }
+            if (gambarKamar.src === "") {
+                alert("Gambar Kamar harus ditampilkan!");
+                return false;
+            }
+            if (fasilitas === "") {
+                alert("Fasilitas harus diisi!");
+                return false;
+            }
+
+            return true;
+        }
+
+        function updateKamarInfo() {
+            const jenisKamar = document.getElementById("jenis_kamar").value;
+            const hargaInput = document.getElementById("harga");
+            const fasilitasInput = document.getElementById("fasilitas");
+            const gambarKamar = document.getElementById("gambar_kamar");
+
+            // Memeriksa apakah jenis kamar dipilih
+            if (jenisKamar && kamarData[jenisKamar]) {
+                hargaInput.value = kamarData[jenisKamar].harga;
+                fasilitasInput.value = kamarData[jenisKamar].fasilitas;
+                
+                // Menampilkan gambar sesuai jenis kamar
+                if (jenisKamar === "STANDAR") {
+                    gambarKamar.src = "kamber.jpg";  // Gambar Standar
+                } else if (jenisKamar === "DELUXE") {
+                    gambarKamar.src = "kamber.jpg";  // Gambar Deluxe
+                } else if (jenisKamar === "FAMILY") {
+                    gambarKamar.src = "kamber.jpg";  // Gambar Family
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+    <div class="max-w-2xl mx-auto p-6 bg-white shadow-md rounded-md mt-10">
+        <h1 class="text-2xl font-bold mb-6">Form Tambah Data Kamar</h1>
+        <form onsubmit="return validasiKamar()">
+            <div class="mb-4">
+                <label class="block text-gray-700">ID Kamar:</label>
+                <input type="text" id="id_kamar" class="w-full px-3 py-2 border rounded-md">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Jenis Kamar:</label>
+                <select id="jenis_kamar" class="w-full px-3 py-2 border rounded-md" onchange="updateKamarInfo()">
+                    <option value="">Pilih Jenis Kamar</option>
+                    <option value="STANDAR">STANDAR</option>
+                    <option value="DELUXE">DELUXE</option>
+                    <option value="FAMILY">FAMILY</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Gambar Ruangan:</label>
+                <img id="gambar_kamar" src="kamber.jpg" alt="Gambar Kamar" class="w-full h-64 object-cover border rounded-md">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Harga:</label>
+                <input type="number" id="harga" class="w-full px-3 py-2 border rounded-md" readonly>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Fasilitas:</label>
+                <textarea id="fasilitas" class="w-full px-3 py-2 border rounded-md" readonly></textarea>
+            </div>
+            <div class="flex justify-end">
+                <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md mr-2">Simpan</button>
+                <button type="reset" class="px-4 py-2 bg-yellow-500 text-white rounded-md">Batal</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

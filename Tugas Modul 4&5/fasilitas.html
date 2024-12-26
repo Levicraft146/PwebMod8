@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data Fasilitas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Data fasilitas yang disediakan
+        const fasilitasData = {
+            "SPA": {
+                "harga_weekend": 200000,
+                "harga_weekday": 150000,
+                "kuota": 10,
+                "jam_buka": "09:00",
+                "jam_tutup": "21:00"
+            },
+            "RESTAURANT": {
+                "harga_weekend": 50000,
+                "harga_weekday": 30000,
+                "kuota": 50,
+                "jam_buka": "06:00",
+                "jam_tutup": "22:00"
+            },
+            "GYM": {
+                "harga_weekend": 100000,
+                "harga_weekday": 80000,
+                "kuota": 20,
+                "jam_buka": "05:00",
+                "jam_tutup": "23:00"
+            }
+        };
+
+        function validasiFasilitas() {
+            var idFasilitas = document.getElementById("id_fasilitas").value;
+            var jenisFasilitas = document.getElementById("jenis_fasilitas").value;
+            var hargaWeekend = document.getElementById("harga_weekend").value;
+            var hargaWeekday = document.getElementById("harga_weekday").value;
+            var kuota = document.getElementById("kuota").value;
+
+            if (idFasilitas === "") {
+                alert("ID Fasilitas tidak boleh kosong!");
+                return false;
+            }
+            if (jenisFasilitas === "") {
+                alert("Jenis Fasilitas harus dipilih!");
+                return false;
+            }
+            if (hargaWeekend === "" || hargaWeekday === "") {
+                alert("Harga Weekend dan Weekday harus diisi!");
+                return false;
+            }
+            if (kuota === "") {
+                alert("Kuota harus diisi!");
+                return false;
+            }
+
+            return true;
+        }
+
+        function updateFasilitasInfo() {
+            const jenisFasilitas = document.getElementById("jenis_fasilitas").value;
+            const hargaWeekendInput = document.getElementById("harga_weekend");
+            const hargaWeekdayInput = document.getElementById("harga_weekday");
+            const kuotaInput = document.getElementById("kuota");
+            const jamBukaInput = document.getElementById("jam_buka");
+            const jamTutupInput = document.getElementById("jam_tutup");
+
+            // Memeriksa apakah jenis fasilitas dipilih
+            if (jenisFasilitas && fasilitasData[jenisFasilitas]) {
+                hargaWeekendInput.value = fasilitasData[jenisFasilitas].harga_weekend;
+                hargaWeekdayInput.value = fasilitasData[jenisFasilitas].harga_weekday;
+                kuotaInput.value = fasilitasData[jenisFasilitas].kuota;
+                jamBukaInput.value = fasilitasData[jenisFasilitas].jam_buka;
+                jamTutupInput.value = fasilitasData[jenisFasilitas].jam_tutup;
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+    <div class="max-w-2xl mx-auto p-6 bg-white shadow-md rounded-md mt-10">
+        <h1 class="text-2xl font-bold mb-6">Form Tambah Data Fasilitas</h1>
+        <form onsubmit="return validasiFasilitas()">
+            <div class="mb-4">
+                <label class="block text-gray-700">ID Fasilitas:</label>
+                <input type="text" id="id_fasilitas" class="w-full px-3 py-2 border rounded-md">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Jenis Fasilitas:</label>
+                <select id="jenis_fasilitas" class="w-full px-3 py-2 border rounded-md" onchange="updateFasilitasInfo()">
+                    <option value="">Pilih Jenis Fasilitas</option>
+                    <option value="SPA">SPA</option>
+                    <option value="RESTAURANT">RESTAURANT</option>
+                    <option value="GYM">GYM</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Harga Weekend:</label>
+                <input type="number" id="harga_weekend" class="w-full px-3 py-2 border rounded-md" readonly>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Harga Weekday:</label>
+                <input type="number" id="harga_weekday" class="w-full px-3 py-2 border rounded-md" readonly>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Kuota:</label>
+                <input type="number" id="kuota" class="w-full px-3 py-2 border rounded-md" readonly>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Jam Buka:</label>
+                <input type="time" id="jam_buka" class="w-full px-3 py-2 border rounded-md" readonly>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Jam Tutup:</label>
+                <input type="time" id="jam_tutup" class="w-full px-3 py-2 border rounded-md" readonly>
+            </div>
+            <div class="flex justify-end">
+                <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md mr-2">Simpan</button>
+                <button type="reset" class="px-4 py-2 bg-yellow-500 text-white rounded-md">Batal</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
