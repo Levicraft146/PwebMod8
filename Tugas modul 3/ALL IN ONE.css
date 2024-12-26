@@ -1,0 +1,144 @@
+/* style.css */
+/* Menetapkan warna latar belakang untuk submenu */
+.submenu {
+    display: none;
+    background-color: #1E3A8A; /* Menetapkan warna latar belakang submenu */
+    color: white; /* Menetapkan warna teks submenu */
+}
+/* Menampilkan submenu ketika kelas 'active' diterapkan */
+.active {
+    display: block !important;
+}
+/* Pengaturan tambahan jika diperlukan */
+body {
+    font-family: Arial, sans-serif;
+}
+/* Header */
+.header {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+}
+/* Styling untuk navbar */
+.nav {
+    background-color: #1D4ED8;
+    padding: 10px 0;
+}
+.nav-links {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-left: 20px;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+.nav a:hover {
+    text-decoration: underline;
+}
+/* Layout untuk Sidebar dan Room Images */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+/* Sidebar */
+.sidebar {
+    width: 30%;  /* Lebar sidebar */
+    background-color: #1D4ED8;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  /* Memberikan jarak antar elemen di dalam sidebar */
+}
+/* Menetapkan tinggi untuk video YouTube */
+.sidebar iframe {
+    width: 100%;
+    height: 300px;  /* Mengatur tinggi iframe */
+    border-radius: 8px;
+}
+/* Mengatur gambar di sidebar */
+.sidebar img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+/* Menambahkan styling untuk teks di bawah gambar */
+.owner-text {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+/* Room Images */
+.rooms {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 65%;  /* Lebar area room images */
+}
+.room-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+/* Styling untuk tabel */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse; /* Menghapus jarak antara border sel */
+}
+/* Styling untuk header tabel */
+th {
+    background-color: #1D4ED8;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+    padding: 10px;
+}
+/* Styling untuk isi tabel */
+td {
+    text-align: left;
+    padding: 10px;
+    vertical-align: middle; /* Menyelaraskan isi tabel ke tengah */
+}
+/* Border untuk tabel dan setiap sel */
+table, th, td {
+    border: 1px solid #ddd;
+}
+/* Styling gambar di dalam tabel agar responsif dan tidak terlalu besar */
+td img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover; /* Memastikan gambar tetap terpotong dengan rapi */
+}
+/* Tambahan hover untuk baris tabel */
+tbody tr:hover {
+    background-color: #f4f4f4; /* Memberikan efek hover pada baris tabel */
+}
+/* Footer */
+footer {
+    background-color: #1D4ED8;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}

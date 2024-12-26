@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamar</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="ALL IN ONE.css"> <!-- Menambahkan link ke file CSS -->
+    <script>
+       // Fungsi untuk toggle submenu berdasarkan ID
+function toggleSubmenu(id) {
+    const submenu = document.getElementById(id);
+    submenu.classList.toggle('active'); // Toggle kelas 'active' untuk menampilkan submenu
+}
+
+// Fungsi untuk toggle menu fasilitas utama
+function toggleFasilitas() {
+    const menu = document.getElementById('fasilitas-menu');
+    menu.classList.toggle('active'); // Toggle kelas 'active' untuk menampilkan/menyembunyikan menu fasilitas
+}
+        
+    </script>
+</head>
+<body class="bg-gray-200">
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <img alt="Hotel Logo" class="mr-4" height="200" src="LCD.jpg" width="200"/>
+                <h1>BEST HOTEL<br>(Levi Craft Diamond)</h1>
+            </div>
+            <img alt="Hotel Image" class="ml-4" height="100" src="Pantai.jpg" width="700"/>
+        </div>
+    </header>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="kamar.html">Kamar</a>
+            <div class="menu-item">
+                <a href="javascript:void(0)" onclick="toggleFasilitas()">Fasilitas</a>
+                <div id="fasilitas-menu" class="submenu">
+                    <ul>
+                        <li><a href="petualangan alam.html">Petualangan Alam</a></li>
+                        <li class="submenu-item">
+                            <a href="javascript:void(0)" onclick="toggleSubmenu('kolam-renang')">Kolam Renang</a>
+                            <div id="kolam-renang" class="submenu">
+                                <ul>
+                                    <li><a href="sumber air panas.html">Sumber Air Panas</a></li>
+                                    <li class="submenu-item">
+                                        <a href="javascript:void(0)" onclick="toggleSubmenu('kolam-anak-dewasa')">Kolam Anak dan Dewasa</a>
+                                        <div id="kolam-anak-dewasa" class="submenu">
+                                            <ul>
+                                                <li><a href="kolam reguler.html">Reguler</a></li>
+                                                <li><a href="kolam premium.html">Premium</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="pusat kebugaran.html">Pusat Kebugaran</a></li>
+                        <li><a href="ruang rapat.html">Ruang Rapat</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="pesan sekarang.html">Pesan Sekarang</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto mt-4">
+        <h2 class="text-2xl font-bold mb-4">Data Kamar</h2>
+        <table class="min-w-full bg-white border border-gray-300">
+            <thead>
+              <tr>
+                <th class="border border-gray-300 px-4 py-2">ID Kamar</th>
+                <th class="border border-gray-300 px-4 py-2">Gambar Ruangan</th>
+                <th class="border border-gray-300 px-4 py-2">Jenis Kamar</th>
+                <th class="border border-gray-300 px-4 py-2">Harga</th>
+                <th class="border border-gray-300 px-4 py-2">Fasilitas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="border border-gray-300 px-4 py-2">101</td>
+                <td class="border border-gray-300 px-4 py-2"><img src="https://storage.googleapis.com/a1aa/image/fKUKtHMd3B3nUaBJBPiu8eiwfJBVcIiT0ZBx7ehcEAKGMqwOB.jpg" alt="Gambar Ruangan 101" width="100" height="80"></td>
+                <td class="border border-gray-300 px-4 py-2">Deluxe</td>
+                <td class="border border-gray-300 px-4 py-2">Rp. 500,000</td>
+                <td class="border border-gray-300 px-4 py-2">Wi-Fi, AC, TV</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-300 px-4 py-2">102</td>
+                <td class="border border-gray-300 px-4 py-2"><img src="https://storage.googleapis.com/a1aa/image/UKYGiijQQ95CI9TyQP6ZC0VMe01dDBdeWbqVnukusEmGjKsTA.jpg" alt="Gambar Ruangan 102" width="100" height="80"></td>
+                <td class="border border-gray-300 px-4 py-2">Superior</td>
+                <td class="border border-gray-300 px-4 py-2">Rp. 600,000</td>
+                <td class="border border-gray-300 px-4 py-2">Wi-Fi, AC, TV, Mini Bar</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-300 px-4 py-2">103</td>
+                <td class="border border-gray-300 px-4 py-2"><img src="https://storage.googleapis.com/a1aa/image/OKHHRWqcheS5GqpW97FCa0Wpf7rhxBzmdSVOGBkLPgqKjKsTA.jpg" alt="Gambar Ruangan 103" width="100" height="80"></td>
+                <td class="border border-gray-300 px-4 py-2">Suite</td>
+                <td class="border border-gray-300 px-4 py-2">Rp. 1,200,000</td>
+                <td class="border border-gray-300 px-4 py-2">Wi-Fi, AC, TV, Mini Bar, Ruang Tamu</td>
+            </tr>
+                <!-- Tambahkan data kamar lainnya di sini -->
+            </tbody>
+        </table>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Queen Best Hotel!</p>
+    </footer>
+</body>
+</html>

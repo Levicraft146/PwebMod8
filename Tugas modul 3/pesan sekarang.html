@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Sekarang</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="ALL IN ONE.css"> <!-- Menambahkan link ke file CSS -->
+    <script>
+       // Fungsi untuk toggle submenu berdasarkan ID
+function toggleSubmenu(id) {
+    const submenu = document.getElementById(id);
+    submenu.classList.toggle('active'); // Toggle kelas 'active' untuk menampilkan submenu
+}
+
+// Fungsi untuk toggle menu fasilitas utama
+function toggleFasilitas() {
+    const menu = document.getElementById('fasilitas-menu');
+    menu.classList.toggle('active'); // Toggle kelas 'active' untuk menampilkan/menyembunyikan menu fasilitas
+}
+        
+    </script>
+</head>
+<body class="bg-gray-200">
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <img alt="Hotel Logo" class="mr-4" height="200" src="LCD.jpg" width="200"/>
+                <h1>BEST HOTEL<br>(Levi Craft Diamond)</h1>
+            </div>
+            <img alt="Hotel Image" class="ml-4" height="100" src="Pantai.jpg" width="700"/>
+        </div>
+    </header>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="kamar.html">Kamar</a>
+            <div class="menu-item">
+                <a href="javascript:void(0)" onclick="toggleFasilitas()">Fasilitas</a>
+                <div id="fasilitas-menu" class="submenu">
+                    <ul>
+                        <li><a href="petualangan alam.html">Petualangan Alam</a></li>
+                        <li class="submenu-item">
+                            <a href="javascript:void(0)" onclick="toggleSubmenu('kolam-renang')">Kolam Renang</a>
+                            <div id="kolam-renang" class="submenu">
+                                <ul>
+                                    <li><a href="sumber air panas.html">Sumber Air Panas</a></li>
+                                    <li class="submenu-item">
+                                        <a href="javascript:void(0)" onclick="toggleSubmenu('kolam-anak-dewasa')">Kolam Anak dan Dewasa</a>
+                                        <div id="kolam-anak-dewasa" class="submenu">
+                                            <ul>
+                                                <li><a href="kolam reguler.html">Reguler</a></li>
+                                                <li><a href="kolam premium.html">Premium</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="pusat kebugaran.html">Pusat Kebugaran</a></li>
+                        <li><a href="ruang rapat.html">Ruang Rapat</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="pesan sekarang.html">Pesan Sekarang</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto mt-4">
+        <h2 class="text-2xl font-bold mb-4">Data Pemesanan</h2>
+        <table class="min-w-full bg-white border border-gray-300">
+          <thead>
+            <tr>
+                <th class="border border-gray-300 px-4 py-2">ID</th>
+                <th class="border border-gray-300 px-4 py-2">Tanggal Pesan</th>
+                <th class="border border-gray-300 px-4 py-2">Pemesan</th>
+                <th class="border border-gray-300 px-4 py-2">Jenis Kamar</th>
+                <th class="border border-gray-300 px-4 py-2">Check In</th>
+                <th class="border border-gray-300 px-4 py-2">Check Out</th>
+                <th class="border border-gray-300 px-4 py-2">Fasilitas</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border border-gray-300 px-4 py-2">001</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-25</td>
+            <td class="border border-gray-300 px-4 py-2">Traveler</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Standar</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-01</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-04</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">002</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-26</td>
+            <td class="border border-gray-300 px-4 py-2">Lumine</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Premium</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-02</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-06</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">003</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-27</td>
+            <td class="border border-gray-300 px-4 py-2">Amber</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Standar</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-01</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-04</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">004</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-28</td>
+            <td class="border border-gray-300 px-4 py-2">Lisa</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Deluxe</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-03</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-07</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">005</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-29</td>
+            <td class="border border-gray-300 px-4 py-2">Kaeya</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Premium</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-01</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-05</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">006</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-30</td>
+            <td class="border border-gray-300 px-4 py-2">Diluc</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Deluxe</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-02</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-06</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">007</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-31</td>
+            <td class="border border-gray-300 px-4 py-2">Fischl</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Standar</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-01</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-05</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">008</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-25</td>
+            <td class="border border-gray-300 px-4 py-2">Zhongli</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Premium</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-03</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-07</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">009</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-26</td>
+            <td class="border border-gray-300 px-4 py-2">Ganyu</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Deluxe</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-01</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-05</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">010</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-27</td>
+            <td class="border border-gray-300 px-4 py-2">Klee</td>
+            <td class="border border-gray-300 px-4 py-2">Deluxe</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-02</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-06</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">011</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-28</td>
+            <td class="border border-gray-300 px-4 py-2">Noelle</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Standar</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-01</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-04</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">012</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-29</td>
+            <td class="border border-gray-300 px-4 py-2">Razor</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Standar</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-02</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-05</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">013</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-30</td>
+            <td class="border border-gray-300 px-4 py-2">Bennett</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Deluxe</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-01</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-06</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">014</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-31</td>
+            <td class="border border-gray-300 px-4 py-2">Sucrose</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Standar</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-03</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-07</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">015</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-25</td>
+            <td class="border border-gray-300 px-4 py-2">Mona</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Premium</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-02</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-06</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">016</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-26</td>
+            <td class="border border-gray-300 px-4 py-2">Xingqiu</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Deluxe</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-01</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-05</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">017</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-27</td>
+            <td class="border border-gray-300 px-4 py-2">Chongyun</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Standar</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-02</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-06</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">018</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-28</td>
+            <td class="border border-gray-300 px-4 py-2">Fischl</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Standar</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-01</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-05</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">019</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-29</td>
+            <td class="border border-gray-300 px-4 py-2">Hu Tao</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Deluxe</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-01</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-06</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">020</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-30</td>
+            <td class="border border-gray-300 px-4 py-2">Xinyan</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Premium</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-02</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-05</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">021</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-31</td>
+            <td class="border border-gray-300 px-4 py-2">Kazuha</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Standar</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-01</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-04</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">022</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-25</td>
+            <td class="border border-gray-300 px-4 py-2">Ayaka</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Deluxe</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-02</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-05</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">023</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-26</td>
+            <td class="border border-gray-300 px-4 py-2">Albedo</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Premium</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-01</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-04</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">024</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-27</td>
+            <td class="border border-gray-300 px-4 py-2">Diona</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Standar</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-02</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-07</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">025</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-30</td>
+            <td class="border border-gray-300 px-4 py-2">Klee</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Deluxe</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-01</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-06</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">026</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-31</td>
+            <td class="border border-gray-300 px-4 py-2">Rosaria</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Standar</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-02</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-04</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">027</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-29</td>
+            <td class="border border-gray-300 px-4 py-2">Sucrose</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Deluxe</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-01</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-06</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">028</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-30</td>
+            <td class="border border-gray-300 px-4 py-2">Chongyun</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Standar</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-02</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-06</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">029</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-31</td>
+            <td class="border border-gray-300 px-4 py-2">Albedo</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Premium</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-01</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-05</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 px-4 py-2">030</td>
+            <td class="border border-gray-300 px-4 py-2">2023-10-30</td>
+            <td class="border border-gray-300 px-4 py-2">Fischl</td>
+            <td class="border border-gray-300 px-4 py-2">Kamar Standar</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-01</td>
+            <td class="border border-gray-300 px-4 py-2">2024-11-05</td>
+            <td class="border border-gray-300 px-4 py-2">Ya</td>
+        </tr>
+        
+        </tbody>
+        </table>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Queen Best Hotel!</p>
+    </footer>
+</body>
+</html>
