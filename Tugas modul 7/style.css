@@ -1,0 +1,36 @@
+/* Menambahkan styling untuk dropdown bertingkat di samping */
+.dropdown-submenu {
+    position: relative; /* Menambahkan relative positioning pada parent untuk submenu */
+}
+
+.dropdown-submenu .dropdown-menu {
+    display: none; /* Menyembunyikan submenu secara default */
+    position: absolute; /* Memposisikan submenu secara absolute */
+    left: 100%; /* Memindahkan submenu ke kanan dari menu utama */
+    top: 0; /* Menjaga submenu pada posisi yang tepat secara vertikal */
+    z-index: 1000; /* Agar submenu muncul di atas konten lainnya */
+}
+
+.dropdown-submenu .dropdown-menu.show {
+    display: block; /* Menampilkan submenu saat kelas show ditambahkan */
+}
+
+/* Menambahkan margin dan padding untuk membuat tampilan lebih rapih */
+.nav-item .dropdown-menu .dropdown-item {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.navbar-nav {
+    margin-left: 10px;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #333;
+}
+
+/* Styling untuk menu dropdown ketika aktif */
+.navbar-nav .dropdown-item:hover {
+    background-color: #555;
+    color: white;
+}
